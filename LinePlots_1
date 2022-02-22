@@ -1,0 +1,12 @@
+from matplotlib import pyplot as plt
+
+x = [25, 26, 27, 28, 29, 30]
+y = [2200, 1500, 60000, 42000, 29000, 78000]
+
+plt.plot(x, y)
+
+plt.xlabel('Ages')
+plt.ylabel('Salary')
+plt.title('Salary by Age')
+
+plt.show()
