@@ -1,0 +1,32 @@
+from matplotlib import pyplot as plt
+
+print(plt.style.available)
+
+plt.style.use('ggplot')
+
+x = [25, 26, 27, 28, 29, 30]
+y = [2200, 1500, 60000, 42000, 29000, 78000]
+
+plt.plot(x, y, color = '#0000FF', linestyle = '--', label = 'Assessment SMEs')
+
+powerbi_y = [25000, 42900, 6500, 65900, 1540, 56000]
+
+plt.plot(x, powerbi_y, color = '#000000', linewidth = '2', label = 'PowerBI Developers')
+
+cloudboost_y = [56000, 54222, 67000, 5487, 12789, 12876]
+
+plt.plot(x, cloudboost_y, color = '#FF0000', linewidth = '2', label = 'CloudBoost')
+
+plt.xlabel('Ages')
+plt.ylabel('Salary')
+plt.title('Salary by Age')
+
+plt.legend()
+
+plt.grid()
+
+plt.tight_layout()
+
+plt.savefig('plot.png')
+
+plt.show()
